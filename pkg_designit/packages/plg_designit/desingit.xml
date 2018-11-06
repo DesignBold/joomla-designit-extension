@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="editors-xtd" method="install">
+	<name>Editor - Designit</name>
+	<creationDate>October 2018</creationDate>
+	<author>Designit</author>
+	<authorEmail>tranviethiepdz@gmail.com</authorEmail>
+	<authorUrl>https://designbold.com</authorUrl>
+	<copyright>(C) 2018 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.0</version>
+	<description>Desigbold designit a button design image</description>
+
+	<files>
+		<filename plugin="designit">designit.php</filename>
+		<folder>assets</folder>
+	</files>
+</extension>

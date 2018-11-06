@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.9" method="upgrade">
+	<name>Desingit Package</name>
+	<author>Designit</author>
+	<creationDate>October 2018</creationDate>
+	<packagename>designit</packagename>
+	<version>1.0.0</version>
+	<authorEmail>tranviethiepdz@gmail.com</authorEmail>
+	<authorUrl>https://designbold.com</authorUrl>
+	<copyright>(C) 2018 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<files folder="packages">
+		<file type="component" id="com_designit" >com_designit.zip</file>
+		<file type="plugin" id="designit" group="system">plg_designit.zip</file>
+	</files>
+</extension>

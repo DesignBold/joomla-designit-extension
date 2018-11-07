@@ -11,7 +11,7 @@
 	<description>Designit package</description>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<updateservers>
-		<server type="extension" priority="2" name="Designit package updates">https://designbold.com/joomla/designit/update_package.xml</server>
+		<server type="extension" priority="2" name="Designit package updates">https://github.com/designboldgit/joomla-designit-extension/blob/master/update_package.xml</server>
 	</updateservers>
 	<files folder="packages">
 		<file type="component" id="com_designit" >com_designit.zip</file>

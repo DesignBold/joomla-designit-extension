@@ -3,10 +3,10 @@
  * @package Joomla.Component
  * @version 1.0
  * @author Designit
- * @copyright (C) 2010- Designit
+ * @copyright (C) 2018- Designit
  * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
-**/
-// No direct access
+*/
+
 defined('_JEXEC') or die();
 
 Class DesignitController extends JControllerLegacy{
@@ -38,7 +38,7 @@ Class DesignitController extends JControllerLegacy{
 		$designit_path = JFolder::create(JPATH_SITE."/images/designit/2018/11/");
 
 		// Handle Request
-		$post_url = isset($_POST['dbsdk_post_url']) ? trim($_POST['dbsdk_post_url']) : '';
+		$post_url = JFactory::getApplication()->input->get('dbsdk_post_url') ? trim(JFactory::getApplication()->input->get('dbsdk_post_url')) : ''; 
 		$post_url = filter_var ( $post_url, FILTER_SANITIZE_STRING);
 		$file_name = basename( parse_url( $post_url, PHP_URL_PATH ) );
 

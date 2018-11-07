@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
  * @author Designit
  * @copyright (C) 2010- Designit
  * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
-**/
+*/
 /**
 * Add button design image into editor
 *

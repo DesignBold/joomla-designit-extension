@@ -5,10 +5,14 @@
 	<creationDate>October 2018</creationDate>
 	<packagename>designit</packagename>
 	<version>1.0.0</version>
-	<authorEmail>tranviethiepdz@gmail.com</authorEmail>
-	<authorUrl>https://designbold.com</authorUrl>
-	<copyright>(C) 2018 Open Source Matters. All rights reserved.</copyright>
+	<url>https://designbold.com</url>
+	<packager>Designbold designit team</packager>
+	<packagerurl>https://github.com/designboldgit/joomla-designit-extension</packagerurl>
+	<description>Designit package</description>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<updateservers>
+		<server type="extension" priority="2" name="Designit package updates">https://designbold.com/joomla/designit/update_package.xml</server>
+	</updateservers>
 	<files folder="packages">
 		<file type="component" id="com_designit" >com_designit.zip</file>
 		<file type="plugin" id="designit" group="system">plg_designit.zip</file>

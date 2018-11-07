@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<updates>
+    <update>
+        <name>Designit Update</name>
+        <description>Some description</description>
+        <element>pkg_mypackage</element>
+        <client>0</client>
+        <type>package</type>
+        <version>1.0.1</version>
+        <infourl title="Some title">http://www.example.com/</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">http://example.com/pkg_mypackage_101.zip</downloadurl>
+        </downloads>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <targetplatform name="joomla" version="3"/>
+    </update>
+</updates>

@@ -10,6 +10,13 @@ Plugin use for Joomla use TinyMCE editor. If your Joomla not use TinyMCE then th
 
 ## Install
 
+This section describes how to install the plugin and get it working.
+
+1 Clone `pkg_designit_v1.0.zip`
+
+2 Access your joomla admin and click `Extensions\Manage\Install`, it's similer `assets/images/step-1.jpg` then choose `pkg_designit_v1.0.zip` just downloaded
+
+3 After install success, let access `Extensions\Manage\Manage`, see `assets/images/step-3.jpg` acctive Editor - Designit. Finish you will see inside editor on toobar an button designit. see `assets/images/step-4.jpg`
 
 
 ### Versioning

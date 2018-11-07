@@ -26,8 +26,8 @@ class PlgButtonDesignit extends JPlugin{
 
 	public function onDisplay($name){
 		$doc = JFactory::getDocument();
-		$doc->addStyleSheet('/joomla/plugins/editors-xtd/designit/assets/css/style.css');
-		$doc->addScript('/joomla/plugins/editors-xtd/designit/assets/js/button.js');
+		$doc->addStyleSheet(JURI::root().'plugins/editors-xtd/designit/assets/css/style.css');
+		$doc->addScript(JURI::root().'plugins/editors-xtd/designit/assets/js/button.js');
 		$button = new JObject;
 		$button->modal = false;
 		$button->class = 'btn';

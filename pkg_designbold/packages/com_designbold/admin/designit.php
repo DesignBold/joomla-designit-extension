@@ -2,8 +2,8 @@
 /**
  * @package Joomla.Component
  * @version 1.0
- * @author Designit
- * @copyright (C) 2018- Designit
+ * @author DesignBold
+ * @copyright (C) 2018- DesignBold
  * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
 */
 
@@ -34,8 +34,10 @@ Class DesignitController extends JControllerLegacy{
 	}
 
 	public function dbsdk_download_url() {
-		// Create new folder designit inside images folder default of joomla
-		$designit_path = JFolder::create(JPATH_SITE."/images/designit/2018/11/");
+		// Create new folder designbold inside images folder default of joomla
+		$cur_year = date("Y");
+		$cur_month = date('m');
+		$designit_path = JFolder::create(JPATH_SITE."/images/designbold/".$cur_year."/".$cur_month);
 
 		// Handle Request
 		$post_url = JFactory::getApplication()->input->get('dbsdk_post_url') ? trim(JFactory::getApplication()->input->get('dbsdk_post_url')) : ''; 
@@ -46,7 +48,7 @@ Class DesignitController extends JControllerLegacy{
 			$obj_data = (object)[];
 			// Check file_array is an image or not
 			if(@is_array(getimagesize($post_url))){
-				$dbsdk_save_dir = JPATH_SITE."/images/designit/2018/11/";
+				$dbsdk_save_dir = JPATH_SITE."/images/designbold/".$cur_year."/".$cur_month;
 
 				// Create a stream
 				$opts = [
@@ -63,7 +65,7 @@ Class DesignitController extends JControllerLegacy{
 				$newName = $this->dbsdk_renameDuplicates($dbsdk_save_dir, $file_name);
 
 				if(file_put_contents($dbsdk_save_dir . $newName, $contentFile)){
-					$obj_data->image_info = array('url' => "images/designit/2018/11/" . $newName);
+					$obj_data->image_info = array('url' => "images/designbold/".$cur_year."/".$cur_month."/". $newName);
 				}
 
 				header("Content-type: application/json; charset=utf-8");
@@ -74,7 +76,7 @@ Class DesignitController extends JControllerLegacy{
 				JFactory::getApplication()->close();
 			}
 		}else{
-			echo 'Well come to desgnit API !';
+			echo 'Well come to DesignBold API !';
 			JFactory::getApplication()->close();
 		}
 	}

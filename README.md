@@ -6,17 +6,15 @@ For more information, check out the [proposal repo](https://github.com/designbol
 
 ## Introduce
 
-Plugin use for Joomla use TinyMCE editor. If your Joomla not use TinyMCE then then plugin not insert image to editor, but it still download in `images/designit/...` of Joomla.
+Designit Magento extension by DesignBold is built to edit images right when you see them. The design tools from DesignBold include all the options that you probably would need: Text, Filters, Crops, Grids, etc. The designed image is server-based rendered and saved into your library. It can be integrated into TinyMCE editor.
 
 ## Install
 
-This section describes how to install the plugin and get it working.
+1 Clone or download zip file from https://github.com/designboldgit/magento-designit-extension.git.
 
-1 Clone `pkg_designit_v1.0.zip`
+2 Unzip file and move the DesignBold folder into magento folder name/app/code/.
 
-2 Access your joomla admin and click `Extensions\Manage\Install`, it's similer `assets/images/step-1.jpg` then choose `pkg_designit_v1.0.zip` just downloaded
-
-3 After install success, let access `Extensions\Manage\Manage`, see `assets/images/step-3.jpg` acctive Editor - Designit. Finish you will see inside editor on toobar an button designit. see `assets/images/step-4.jpg`
+3 Run php bin/magento setup:upgrade command to register extension.
 
 
 ### Versioning

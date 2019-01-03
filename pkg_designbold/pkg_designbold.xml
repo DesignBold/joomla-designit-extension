@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.9" method="upgrade">
+	<name>DesignBold Package</name>
+	<author>DesignBold</author>
+	<creationDate>October 2018</creationDate>
+	<packagename>designbold</packagename>
+	<version>1.0.1</version>
+	<url>https://designbold.com</url>
+	<packager>DesignBold team</packager>
+	<packagerurl>https://github.com/designboldgit/joomla-designit-extension</packagerurl>
+	<description>DesignBold package</description>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<updateservers>
+		<server type="extension" priority="2" name="DesignBold package updates">https://github.com/designboldgit/joomla-designit-extension/blob/master/update_package.xml</server>
+	</updateservers>
+	<files folder="packages">
+		<file type="component" id="com_designbold">com_designbold.zip</file>
+		<file type="plugin" id="plg_designbold" group="system">plg_designbold.zip</file>
+	</files>
+</extension>

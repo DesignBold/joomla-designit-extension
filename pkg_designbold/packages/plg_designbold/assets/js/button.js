@@ -9,9 +9,10 @@
  window.DBSDK_Cfg = {
     export_mode : ['publish'],
     export_callback: function (resultUrl, document_id, options) {
+        resultUrl = encodeURIComponent(resultUrl);
         // do something with design image URL, which is only accessible for 24 hours
-        var host = window.location.origin + '/' + window.location.pathname.split('/')[1];
-        var url = host + "/administrator/index.php?option=com_designit";
+        var host = DBSDkBaseUrl;
+        var url = host + "index.php?option=com_designbold";
         var params = "dbsdk_post_url=" + resultUrl;
         DBSDK.uploadImage(url, params, "POST");
     },
@@ -514,28 +515,32 @@ window.DBSDK = {
     };
 
     DBSDK.uploadImage = function(url, params, method){
+
+        var data = params;
+
         var xhr = new XMLHttpRequest();
-        xhr.open(method , url, true);
+        xhr.withCredentials = true;
 
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onreadystatechange = function() {
-            if(this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
                 var rich = (typeof tinyMCE != "undefined") && tinyMCE.activeEditor && !tinyMCE.activeEditor.isHidden();
                 
                 if( rich ){
                     var result = JSON.parse(this.responseText);
                     tinyMCE.activeEditor.selection.setContent('<img src="' + result.image_info.url + '" alt="" class="img-responsive">');
+                    // Hidden notification 
+                    DBSDK.$('#dbsdk_modal_notification').style.display = 'none';
+                }else{
+                    // Hidden notification 
+                    DBSDK.$('#dbsdk_modal_notification').style.display = 'none';
                 }
-                
-                // Hidden notification 
-                DBSDK.$('#dbsdk_modal_notification').style.display = 'none';
             }
-        }
-        xhr.send(params);
+        });
 
-        // Show notification when download image and insert image to editor
-        DBSDK.$('#dbsdk_modal_notification').style.display = 'block';
+        xhr.open(method, url);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.send(data);
     }
 
     DBSDK.getParameterByName = function (name, url) {

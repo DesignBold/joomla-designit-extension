@@ -37,18 +37,17 @@ Class DesignitController extends JControllerLegacy{
 		// Create new folder designbold inside images folder default of joomla
 		$cur_year = date("Y");
 		$cur_month = date('m');
-		$designit_path = JFolder::create(JPATH_SITE."/images/designbold/".$cur_year."/".$cur_month);
 
 		// Handle Request
-		$post_url = JFactory::getApplication()->input->get('dbsdk_post_url') ? trim(JFactory::getApplication()->input->get('dbsdk_post_url')) : ''; 
-		$post_url = filter_var ( $post_url, FILTER_SANITIZE_STRING);
+		$arr_post = JRequest::get( 'dbsdk_post_url', "" );
+		$post_url = !empty($arr_post['dbsdk_post_url']) ? $arr_post['dbsdk_post_url'] : ''; 
 		$file_name = basename( parse_url( $post_url, PHP_URL_PATH ) );
 
-		if ( isset( $post_url ) && $post_url != '' && $file_name != '') {
+		if ( $post_url != '' && $file_name != '') {
 			$obj_data = (object)[];
 			// Check file_array is an image or not
 			if(@is_array(getimagesize($post_url))){
-				$dbsdk_save_dir = JPATH_SITE."/images/designbold/".$cur_year."/".$cur_month;
+				$dbsdk_save_dir = JPATH_SITE."/images/designbold/".$cur_year."/".$cur_month.'/';
 
 				// Create a stream
 				$opts = [

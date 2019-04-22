@@ -25,7 +25,4 @@ DesignBold can now be integrated into your Joomla site to help you create and de
 
 **Video tutorials:**
 
-Check out the video tutorials below:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hCFUH1j2azc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+Check out the [video tutorials](https://www.youtube.com/watch?time_continue=2&v=hCFUH1j2azc)

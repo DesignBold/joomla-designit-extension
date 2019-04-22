@@ -1,17 +1,31 @@
-# Designbold designit button intergration for Joomla use TinyMCE editor
+# Overview
+DesignBold is the best online photo editor design studio. They make amazing professional and simple design that includes presentations, posters, flyers and many more.
 
-DesignBold a button allow designing image on Joomla, written completely in Javascript.
+# DesignBold and Joomla websites :
+DesignBold can now be integrated into your Joomla site to help you create and design graphics from both front-end and back-end.
 
-For more information, check out the [proposal repo](https://github.com/DesignBold/joomla-designit-extension).
+## Installation guides:
 
-## Overview
+#1: Install Designbold package for Joomla
 
-DesignBold Magento extension by DesignBold is built to edit images right when you see them. The design tools from DesignBold include all the options that you probably would need: Text, Filters, Crops, Grids, etc. The designed image is server-based rendered and saved into your library. It can be integrated into TinyMCE editor.
+- Download the package, extract.
+- Access your Joomla site back-end > Extensions > Manage > Install and install the plugin using the file: pkg_designbold.zip
 
-## Install
+![](http://static.joomlart.com/images/blog/2018/designbold-integration/install-plugin.jpg)
 
-1 Clone or download zip file from `https://github.com/DesignBold/joomla-designit-extension.git`.
+#2: Enable DesignBold plugin in "Extensions > Plugin"
 
-2 Access your joomla admin and click `Extensions\Manage\Install`, it's similer `assets/images/step-1.jpg` then unzip `joomla-designit-extension-master.zip` and choose `pkg_designbold.zip` inside the folder just unzip
+![](http://static.joomlart.com/images/blog/2018/designbold-integration/enable-plugin.jpg)
 
-3 After install success, let access `Extensions\Manage\Manage`, see `assets/images/step-3.jpg` acctive Editor - DesignBold. Finish you will see inside editor on toobar an button designit. see `assets/images/step-4.jpg`.
+#3: In Article edit page (front-end or back-end), click on "DesignBold" button on the editor to make and design graphic
+
+![](http://static.joomlart.com/images/blog/2018/designbold-integration/edit-article.jpg)
+
+#4: Once done, click on Publish to insert the graphic to your article.
+
+**Video tutorials:**
+
+Check out the video tutorials below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hCFUH1j2azc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
